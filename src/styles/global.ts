@@ -2,9 +2,9 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 export const cores = {
   corTexto: '#121714',
-  corFundo: '#eee',
-  corPrincipal: '#0c2461',
-  corSecundaria: '#4a69bd'
+  corFundo: '#F6CE71',
+  corPrincipal: '#C40C0C',
+  corSecundaria: '#FF6500'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    color: ${cores.corTexto}
+    color: ${cores.corFundo}
   }
 
   body {

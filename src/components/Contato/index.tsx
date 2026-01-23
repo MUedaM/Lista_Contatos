@@ -1,15 +1,14 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import * as S from './styles'
 import user from '../../imagens/user-icon.png'
-import { useState } from 'react'
+import { remover } from '../../store/reducer/contatos'
+import ContatoClass from '../../models/Contato'
 
-// Dados type adicionados primeiro
-type Props = {
-  nome: string
-  email: string
-  numero: number
-}
+type Props = ContatoClass
 
-const ContatoComponent = ({ nome, email, numero }: Props) => {
+const ContatoComponent = ({ id, nome, email, numero }: Props) => {
+  const dispatch = useDispatch()
   const [editing, setEditing] = useState(false)
 
   return (
@@ -25,19 +24,23 @@ const ContatoComponent = ({ nome, email, numero }: Props) => {
           <S.Dados disabled={!editing} value={email} />
         </S.Info>
         <S.Info>
-          <b>Numero:</b>
+          <b>Numero Cel.:</b>
           <S.Dados disabled={!editing} value={numero} />
         </S.Info>
         <S.ActionBar>
           {editing ? (
             <>
-              <S.Button>Salvar</S.Button>
-              <S.Button onClick={() => setEditing(false)}>Cancelar</S.Button>
+              <S.ButtonSalvar>Salvar</S.ButtonSalvar>
+              <S.ButtonRemover onClick={() => setEditing(false)}>
+                Cancelar
+              </S.ButtonRemover>
             </>
           ) : (
             <>
               <S.Button onClick={() => setEditing(true)}>Editar</S.Button>
-              <S.Button>Remover</S.Button>
+              <S.ButtonRemover onClick={() => dispatch(remover(id))}>
+                Remover
+              </S.ButtonRemover>
             </>
           )}
         </S.ActionBar>

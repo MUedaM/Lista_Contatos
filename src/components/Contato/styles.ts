@@ -55,8 +55,7 @@ export const ActionBar = styled.div`
 `
 
 export const Button = styled.button`
-  font-weight: bold;
-  color: ${cores.corSecundaria};
+  color: ${cores.corPrincipal};
   padding: 8px 16px;
   border: none;
   cursor: pointer;
@@ -65,4 +64,13 @@ export const Button = styled.button`
   margin-right: 8px;
   justify-content: end;
   border-radius: 8px;
+`
+
+export const ButtonRemover = styled(Button)`
+  color: ${cores.corFundo};
+  background-color: ${cores.corPrincipal};
+`
+export const ButtonSalvar = styled(Button)`
+  color: ${cores.corFundo};
+  background-color: ${cores.corSalvar};
 `

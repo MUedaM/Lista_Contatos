@@ -17,7 +17,7 @@ export const Infos = styled(Info)`
   width: 100%;
 
   label {
-    color: ${cores.corPrincipal};
+    color: white;
     font-size: 16px;
     width: 150px;
     line-height: 30px;
@@ -27,11 +27,11 @@ export const Infos = styled(Info)`
 `
 
 export const Dados = styled(Dado)`
-  border-bottom: 2px solid ${cores.corPrincipal};
+  border-bottom: 2px solid white;
 
   &:focus {
     outline: none;
-    border-bottom: 2px solid ${cores.corPrincipal};
+    border-bottom: 2px solid white;
   }
 `
 export const ButtonCadastrar = styled(Button)`

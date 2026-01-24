@@ -12,7 +12,7 @@ export const Contato = styled.div`
 export const Foto = styled.img`
   width: auto;
   height: 25vh;
-  margin: 16px;
+  margin: 12px;
   border-radius: 8px;
 `
 

@@ -10,7 +10,7 @@ const ListaContatos = () => {
     <S.Lista>
       <S.MainContainer>
         {itens.map((t) => (
-          <div key={t.nome}>
+          <div key={t.id}>
             <ContatoComponent
               id={t.id}
               nome={t.nome}

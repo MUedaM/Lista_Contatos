@@ -1,12 +1,25 @@
-import * as S from './styles'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import { Titulo } from '../../styles/global'
+import { TituloNovo } from './styles'
 
-const Header = () => (
-  <S.Titulo>
-    <h1>Lista de contatos</h1>
-    <div>
-      <span>4 contatos adicionados</span>
-    </div>
-  </S.Titulo>
-)
+type Props = {
+  tipoHeader: boolean
+}
+
+const Header = ({ tipoHeader }: Props) => {
+  const { itens } = useSelector((state: RootReducer) => state.contatos)
+
+  return tipoHeader ? (
+    <Titulo>
+      <h1>LISTA DE CONTATOS</h1>
+      <div>
+        <span>{itens.length} contatos adicionados</span>
+      </div>
+    </Titulo>
+  ) : (
+    <TituloNovo>ADICIONAR NOVO CONTATO</TituloNovo>
+  )
+}
 
 export default Header

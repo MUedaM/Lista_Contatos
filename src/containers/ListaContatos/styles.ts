@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const Lista = styled.main`
-  padding: 16px;
-`
+export const Lista = styled.main``
 
 export const MainContainer = styled.div`
   display: grid;

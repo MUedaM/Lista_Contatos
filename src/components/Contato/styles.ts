@@ -7,6 +7,11 @@ export const Contato = styled.div`
   border-radius: 16px;
   display: flex;
   font-size: 16px;
+
+  @media (max-width: 1024px) {
+    display: block;
+    text-align: center;
+  }
 `
 
 export const Foto = styled.img`
@@ -24,6 +29,10 @@ export const ButtonRemover = styled(Button)`
   background-color: ${cores.corPrincipal};
   padding: 8px 16px 8px 8px;
 
+  @media (max-width: 1024px) {
+    border-radius: 0px 8px 8px 0px;
+  }
+
   p {
     color: ${cores.corFundo};
   }
@@ -39,6 +48,10 @@ export const ButtonRemover = styled(Button)`
 
 export const ButtonSalvar = styled(Button)`
   background-color: ${cores.corSalvar};
+
+  @media (max-width: 1024px) {
+    border-radius: 8px 0px 0px 8px;
+  }
 
   p {
     color: ${cores.corFundo};

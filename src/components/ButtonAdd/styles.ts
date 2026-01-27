@@ -10,8 +10,8 @@ export const Button = styled(Link)`
   color: ${cores.corFundo};
   border-radius: 50%;
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
   text-decoration: none;
   font-size: 40px;
   line-height: 64px;

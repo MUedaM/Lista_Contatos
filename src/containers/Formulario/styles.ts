@@ -54,6 +54,10 @@ export const ButtonVoltar = styled(Button)`
   background-color: ${cores.corPrincipal};
   padding: 8px 16px;
 
+  @media (max-width: 1024px) {
+    border-radius: 0px 8px 8px 0px;
+  }
+
   p {
     color: ${cores.corFundo};
   }

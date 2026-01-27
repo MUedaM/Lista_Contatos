@@ -43,16 +43,25 @@ export const Titulo = styled.header`
   border-radius: 16px;
   align-items: center;
 
+  @media (max-width: 424px) {
+    display: block;
+    text-align: center;
+  }
+
   h1 {
     font-size: 18px;
-    flex: 1;
     font-style: italic;
     color: ${cores.corFundo};
+    margin-right: 32px;
+    flex: 1;
+
+    @media (max-width: 424px) {
+      margin: 16px 0;
+    }
   }
 
   div {
     display: flex;
-    align-items: center;
 
     img {
       width: 18px;
@@ -62,6 +71,12 @@ export const Titulo = styled.header`
 
     span {
       color: ${cores.corFundo};
+    }
+
+    @media (max-width: 424px) {
+      margin: 16px 0;
+      display: block;
+      text-align: center;
     }
   }
 `
@@ -73,6 +88,10 @@ export const Info = styled.p`
     color: ${cores.corPrincipal};
     margin-right: 8px;
     padding-top: 8px;
+
+    @media (max-width: 1024px) {
+      margin-right: 0;
+    }
   }
 `
 
@@ -91,12 +110,21 @@ export const Dado = styled.input`
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
+
+  @media (max-width: 1024px) {
+    text-align: center;
+    padding-left: 0;
+  }
 `
 
 export const ActionBar = styled.div`
   margin-top: 16px;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 `
 
 export const Button = styled.button`
@@ -111,6 +139,11 @@ export const Button = styled.button`
   display: flex;
   vertical-align: middle;
   padding: 8px 16px;
+
+  @media (max-width: 1024px) {
+    margin-right: 0;
+    border-radius: 8px 0px 0px 8px;
+  }
 
   img {
     width: 16px;

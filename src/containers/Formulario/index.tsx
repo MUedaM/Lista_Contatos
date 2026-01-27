@@ -31,24 +31,27 @@ const Formulario = () => {
             id="nome"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
+            required
           />
         </S.Infos>
         <S.Infos>
           <label htmlFor="email">E-mail:</label>
           <S.Dados
-            type="text"
+            type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </S.Infos>
         <S.Infos>
           <label htmlFor="numero">Numero Cel:</label>
           <S.Dados
-            type="text"
+            type="number"
             id="numero"
             value={numero}
             onChange={(e) => setNumero(e.target.value)}
+            required
           />
         </S.Infos>
         <ActionBar>

@@ -32,7 +32,7 @@ const ContatoComponent = ({
     if (emailOriginal.length > 0) {
       setEmail(emailOriginal)
     }
-    if (numeroOriginal.length > 0) {
+    if (numeroOriginal.length >= 10) {
       setNumero(numeroOriginal)
     }
   }, [nomeOriginal, emailOriginal, numeroOriginal])
@@ -60,7 +60,7 @@ const ContatoComponent = ({
         <Info>
           <b>E-mail:</b>
           <Dado
-            type="text"
+            type="email"
             disabled={!editing}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -68,12 +68,20 @@ const ContatoComponent = ({
         </Info>
         <Info>
           <b>Numero Cel:</b>
-          <Dado
-            type="text"
-            disabled={!editing}
-            value={numero}
-            onChange={(e) => setNumero(e.target.value)}
-          />
+          {editing ? (
+            <Dado
+              type="number"
+              value={numero}
+              onChange={(e) => setNumero(e.target.value)}
+            />
+          ) : (
+            <Dado
+              type="text"
+              disabled={!editing}
+              value={numero}
+              onChange={(e) => setNumero(e.target.value)}
+            />
+          )}
         </Info>
         <ActionBar>
           {editing ? (

@@ -11,19 +11,19 @@ const initialState: ContatosState = {
       id: 1,
       nome: 'Michael Ueda Matias',
       email: 'mi-ueda@outlook.com',
-      numero: '41 9 9900-8890'
+      numero: '41999008890'
     },
     {
       id: 2,
       nome: 'Neusa Yoko Ueda',
       email: 'ny-ueda@outlook.com',
-      numero: '41 9 9914-9209'
+      numero: '41999149209'
     },
     {
       id: 3,
       nome: 'Antonio Matias',
       email: 'matias.toni@outlook.com',
-      numero: '41 9 9607-2411'
+      numero: '41996072411'
     }
   ]
 }

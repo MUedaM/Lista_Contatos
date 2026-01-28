@@ -68,20 +68,12 @@ const ContatoComponent = ({
         </Info>
         <Info>
           <b>Numero Cel:</b>
-          {editing ? (
-            <Dado
-              type="number"
-              value={numero}
-              onChange={(e) => setNumero(e.target.value)}
-            />
-          ) : (
-            <Dado
-              type="text"
-              disabled={!editing}
-              value={numero}
-              onChange={(e) => setNumero(e.target.value)}
-            />
-          )}
+          <Dado
+            type="number"
+            disabled={!editing}
+            value={numero}
+            onChange={(e) => setNumero(e.target.value)}
+          />
         </Info>
         <ActionBar>
           {editing ? (

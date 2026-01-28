@@ -1,11 +1,14 @@
 import Header from '../../containers/Header'
 import ListaContatos from '../../containers/ListaContatos'
 import ButtonAdd from '../../components/ButtonAdd'
+import { Container } from '../../styles/global'
 
 const Home = () => (
   <>
-    <Header tipoHeader={true} />
-    <ListaContatos />
+    <Container>
+      <Header tipoHeader={true} />
+      <ListaContatos />
+    </Container>
     <ButtonAdd />
   </>
 )

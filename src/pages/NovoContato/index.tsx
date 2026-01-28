@@ -1,10 +1,13 @@
 import Header from '../../containers/Header'
 import Formulario from '../../containers/Formulario'
+import { Container } from '../../styles/global'
 
 const NovoContato = () => (
   <>
-    <Header tipoHeader={false} />
-    <Formulario />
+    <Container>
+      <Header tipoHeader={false} />
+      <Formulario />
+    </Container>
   </>
 )
 

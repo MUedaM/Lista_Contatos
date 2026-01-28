@@ -4,10 +4,10 @@ export const Lista = styled.main``
 
 export const MainContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   gap: 16px;
 
   @media (max-width: 640px) {
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
   }
 `
